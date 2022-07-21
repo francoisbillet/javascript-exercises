@@ -1,13 +1,15 @@
-const ftoc = function() {
-
+const ftoc = function (fTemperature) {
+  // return Number((((fTemperature - 32) * 5) / 9).toFixed(1));
+  return Math.round((((fTemperature - 32) * 5) / 9) * 10) / 10;
 };
 
-const ctof = function() {
-
+const ctof = function (cTemperature) {
+  // return Number(((cTemperature * 9) / 5 + 32).toFixed(1));
+  return Math.round(((cTemperature * 9) / 5 + 32) * 10) / 10;
 };
 
 // Do not edit below this line
 module.exports = {
   ftoc,
-  ctof
+  ctof,
 };
